@@ -1,0 +1,46 @@
+public class HomeAppliancesStore {
+    static String a;
+
+    public static String getB() {
+        return b;
+    }
+
+    public static void setB(String b) {
+        HomeAppliancesStore.b = b;
+    }
+
+    public static int getx() {
+        return c;
+    }
+
+    public static void setC(int c) {
+        HomeAppliancesStore.c = c;
+    }
+
+    static String b;
+    static int c;
+
+    public static String getA() {
+        return a;
+    }
+
+    public static void setS(String a) {
+        HomeAppliancesStore.a = a;
+    }
+
+
+    public static void main(String[] args) {
+        a = args[0];
+        b = args[1];
+        try {
+            c = Integer.parseInt(args[2]);
+            if (a == null || b == null) {
+                System.out.println("error , No Name / Address");
+            } else {
+                System.out.println("\n name:" + a + "\n address:" + b + "\n staff:" + c);
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("error , No Int");
+        }
+    }
+}
